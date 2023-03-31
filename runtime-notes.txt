@@ -1,0 +1,32 @@
+Results for the extra large array:
+doubleInsert: 1.041520245 s
+doubleAppend: 4.652755 ms
+
+Results for the large array:
+doubleInsert: 7.005846 ms
+doubleAppend: 714.423 µs
+
+Results for the medium array:
+doubleInsert: 156.918 μs
+doubleAppend: 143.55 μs
+
+Results for the smallarray:
+doubleInsert: 68.952 μs
+doubleAppend: 134.726 μs
+
+Results for the tiny array:
+doubleInsert: 47.539 μs
+doubleAppend: 104.385 μs
+
+
+
+    It is very clear that though the insert function starts off a bit faster than the append function,
+the append function scales much better the larger the input array of the function is, as just based off
+of the runtimes displayed above we can see that the insert functions runtime increases at a much steeper
+rate.
+
+    The reason behind the fact that that the insert funcion increases at such a large rate comparatively, 
+is because unlike the append, function, in the insert function, each time the insert function runs, it 
+forces all elements of the array to shift their indicies to make room for the newly added element at the
+beginning of the array, whereas the append can just create a new index at the end of the array for the 
+new element.
